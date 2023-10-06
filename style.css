@@ -19,7 +19,7 @@
   --fs-200: 1.25rem;
   --fs-300: 1.5rem;
   --fs-400: 1.75rem;
-  --fs-500: 2rem;
+  --fs-500: 2.5rem;
 
   --size-100: ;
   --size-200: ;
@@ -92,7 +92,7 @@ body {
   outline: none;
   cursor: pointer;
   border-radius: 100vw;
-  box-shadow: 0.5rem 1rem 5rem hsl(var(--clr-secondary-hsl-300), 0.5);
+  box-shadow: 0.5rem 4rem 5rem hsl(var(--clr-secondary-hsl-300), 0.9);
   justify-self: flex-start;
 }
 
@@ -105,33 +105,46 @@ body {
   outline: none;
 }
 
-.social-icons {
-  gap: 1rem;
-  justify-content: end;
-}
-
 .social-icons li {
   display: grid;
   place-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0.5rem;
   border-radius: 50%;
   border: 1px solid var(--clr-secondary-100);
 }
 
-.social-icons img:hover {
+.ionicon {
+  fill: hsl(var(--clr-secondary-hsl-100));
+  cursor: pointer;
+}
+
+.social-icons li:hover {
+  border-color: var(--clr-primary-300);
+}
+
+.social-icons li:hover .ionicon {
   fill: var(--clr-primary-300);
+}
+
+.social-icons {
+  gap: 1rem;
+  justify-content: center;
 }
 
 /* Utilities */
 
 .container {
-  --max-width: 1110px;
+  --max-width: 1300px;
   --pading: 1rem;
 
   width: min(var(--max-width), 100% - (var(--pading) * 2));
   margin-inline: auto;
+}
+
+.padding-block-050 {
+  padding-block: 1rem;
 }
 
 .padding-block-100 {
@@ -158,9 +171,13 @@ body {
   line-height: 1.5;
 }
 
+.text-max-width {
+  max-width: 50ch;
+}
+
 /* Small screen widths */
 
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   .align-center {
     text-align: center;
     margin-inline: auto;
@@ -169,15 +186,42 @@ body {
 
 /* Big screen widths */
 
-@media (min-width: 650px) {
+@media (min-width: 900px) {
   body {
     background-image: url(images/bg-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: var(--fs-200);
+  }
+
+  .btn {
+    font-size: var(--fs-200);
+    padding: 1rem 5rem;
   }
 
   main > div {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 0.75fr;
     align-items: center;
+  }
+
+  .logo-wrapper {
+    max-width: 13rem;
+  }
+
+  .heading {
+    font-size: var(--fs-500);
+    max-width: 20ch;
+  }
+
+  .social-icons {
+    justify-content: end;
+  }
+
+  .padding-block-100 {
+    padding-block: 2.5rem;
+  }
+
+  .padding-block-200 {
+    padding-block: 3rem;
   }
 }
