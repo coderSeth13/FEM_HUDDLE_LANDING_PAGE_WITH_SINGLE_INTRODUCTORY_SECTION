@@ -5,7 +5,7 @@
 #### Project links
 
 - Solution URL: https://github.com/coderSeth13/FEM_HUDDLE_LANDING_PAGE_WITH_SINGLE_INTRODUCTORY_SECTION.git
-- Live Site URL:
+- Live Site URL: https://coderseth13.github.io/FEM_HUDDLE_LANDING_PAGE_WITH_SINGLE_INTRODUCTORY_SECTION/
 
 #### Social links
 
